@@ -1,0 +1,9 @@
+import java.util.Stack;
+
+public class Example {
+
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+		// LIFO = Last In First Out
+	}
+}

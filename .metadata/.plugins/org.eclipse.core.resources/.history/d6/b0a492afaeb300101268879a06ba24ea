@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Example {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.setId(2);
+		s1.setName("ABC");
+		s1.setAge(20);
+
+		Student s2 = new Student(9, "DEF", 25);
+		Student s3 = new Student(3, "GHI", 30);
+		Student s4 = new Student(1, "JKi", 30);
+		Student s5 = new Student(6, "FDR", 30);
+
+		List<Student> list = new ArrayList<>();
+		list.add(s1);
+		list.add(s2);
+		list.add(s3);
+		list.add(s4);
+		list.add(s5);
+		list.add(null);
+
+		List<Student> list2 = List.of(s1, s2, s3, s4, s5);
+		List<Student> list3 = Arrays.asList(s1, s2, s3, s4, s5);
+
+		Map<Integer, Student> map = new HashMap<>();
+
+		for (Student student : list) {
+			if (student != null && student.getId() == 1) {
+				System.out.println(student);
+			}
+		}
+
+		for (Student student : list) {
+			if (student != null) {
+				map.put(student.getId(), student);
+			}
+		}
+		System.out.println(map);
+		
+		Student st = map.get(1);
+		System.out.println(st);
+		
+		// Remove duplicates 
+		// print unique char from a string  ex: Rahul
+		// print first duplicate char from a string
+		// find the first non-repeating char from a string
+		// find the first repeating char from a string
+		// find the duplicate number from an array of 1 to N
+		// 
+	}
+}

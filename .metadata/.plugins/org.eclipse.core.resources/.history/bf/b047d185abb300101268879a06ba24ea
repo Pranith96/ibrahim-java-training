@@ -1,0 +1,37 @@
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		
+		Address addr = new Address();
+		addr.setStreet("123 Main St");
+		addr.setCity("Springfield");
+		addr.setState("IL");
+		addr.setZipCode("62701");
+		System.out.println(addr);
+		
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+
+		String name = s1.getName();
+		System.out.println(name);
+		System.out.println(s1.getAge());
+		
+		Address sd = s1.getAddress();
+		System.out.println(sd);
+		String strr = s1.getAddress().getStreet();
+		System.out.println(strr);
+		
+		// Student --> Address
+		// Student --> College
+		// Student --> Department
+		// College --> Address
+		
+		// Employee -> Address
+		// Employee -> Company
+		// Employee -> Projects
+		// Company -> Address
+	}
+}

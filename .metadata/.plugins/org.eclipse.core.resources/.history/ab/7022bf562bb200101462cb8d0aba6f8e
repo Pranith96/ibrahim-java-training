@@ -1,0 +1,21 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.setId(1);
+		s1.setName("ABC");
+		s1.setAge(20);
+
+		Student s2 = new Student(2, "DEF", 25);
+		Student s3 = new Student(3, "GHI", 30);
+
+		Map<Integer, Student> map = new HashMap<>();
+		map.put(1, s1);
+		map.put(2, s2);
+		map.put(3, s3);
+		System.out.println(map);
+	}
+}

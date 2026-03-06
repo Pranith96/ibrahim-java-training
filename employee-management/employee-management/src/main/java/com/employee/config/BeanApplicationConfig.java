@@ -1,0 +1,23 @@
+package com.employee.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import com.employee.service.EmployeeService;
+import com.employee.service.EmployeeServiceImpl;
+
+@Profile(value = { "dev", "prod", "test", "perf", "local" })
+@Configuration
+public class BeanApplicationConfig {
+
+	@Bean
+	public String sampleBean() {
+		return "This is a sample bean";
+	}
+	
+//	@Bean
+//	public EmployeeService employeeServiceBean() {
+//		return new EmployeeServiceImpl();
+//	}
+}

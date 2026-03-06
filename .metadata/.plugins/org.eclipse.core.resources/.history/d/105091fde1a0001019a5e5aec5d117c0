@@ -1,0 +1,75 @@
+
+public class OldStudent { // extends Object is optional{
+
+	private int sId; // 10
+	private String sName;
+	private int sAge;
+	private String sMobileNumber;
+	private Address address;
+	private int accountNumber;
+	private String ifsc;
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public int getsId() {
+		return sId;
+	}
+
+	public void setsId(int sId) {
+		this.sId = sId;
+	}
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public int getsAge() {
+		return sAge;
+	}
+
+	public void setsAge(int sAge) {
+		this.sAge = sAge;
+	}
+
+	public String getsMobileNumber() {
+		return sMobileNumber;
+	}
+
+	public void setsMobileNumber(String sMobileNumber) {
+		this.sMobileNumber = sMobileNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "OldStudent [sId=" + sId + ", sName=" + sName + ", sAge=" + sAge + ", sMobileNumber=" + sMobileNumber
+				+ ", address=" + address + "]";
+	}
+
+	public OldStudent(int sId, String sName, int sAge, String sMobileNumber, Address address) {
+		this.sId = sId;
+		this.sName = sName;
+		this.sAge = sAge;
+		this.sMobileNumber = sMobileNumber;
+		this.address = address;
+	}
+
+	public OldStudent(int sAge, String sMobileNumber, Address address) {
+		this.sAge = sAge;
+		this.sMobileNumber = sMobileNumber;
+		this.address = address;
+	}
+
+	public OldStudent() {
+	}
+
+}

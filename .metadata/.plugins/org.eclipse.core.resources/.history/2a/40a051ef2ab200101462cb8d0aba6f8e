@@ -1,0 +1,21 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.setId(1);
+		s1.setName("ABC");
+		s1.setAge(20);
+
+		Student s2 = new Student(2, "DEF", 25);
+		Student s3 = new Student(3, "GHI", 30);
+
+		Set<Student> set = new HashSet<>();
+		set.add(s1);
+		set.add(s2);
+		set.add(s3);
+		set.add(new Student(1, "ABC", 35));
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.Stack;
+
+public class Example {
+
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+		// LIFO = Last In First Out
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		stack.push(4);
+		stack.push(5);
+		System.out.println(stack);
+		Integer i = stack.peek();
+		System.out.println(i);
+		Integer popedValue = stack.pop();
+		System.out.println(popedValue);
+	}
+}

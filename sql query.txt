@@ -1,0 +1,44 @@
+create database ibrahim_db;
+use ibrahim_db;
+
+create table employee(id int, name varchar(255), age int, mobile_number varchar(255));
+select * from employee;
+desc employee;
+
+insert into employee(id,name,age,mobile_number) values (1,'abc',12,'123456789');
+insert into employee(id,name,age,mobile_number) values (2,'xyz',15,'123456709');
+insert into employee(id,name,age,mobile_number) values (3,'abc',11,'123456789');
+insert into employee(id,name,age,mobile_number) values (4,'pqr',10,'123456989');
+insert into employee(id,name,age,mobile_number) values (5,'njh',10,'123256789');
+insert into employee(id,name,age,mobile_number) values (6,'hjab',10,'123256789');
+
+select id,name,age,mobile_number from employee;
+select count(id) from employee;
+select * from employee where id =2;
+select * from employee where name ='abc' and id = 1;
+select * from employee where name ='abc' or id = 1;
+select * from employee where age <=11;
+select * from employee where age >=11;
+select * from employee where age between 10 and 12;
+select * from employee order by age asc;
+select * from employee order by age desc;
+
+select min(age) from employee;
+select max(age) from employee;
+select sum(age) from employee;
+select avg(age) from employee;
+
+select * from employee where name like '%bc';
+select * from employee where name like '%r';
+select * from employee where name like 'p%';
+select * from employee where name like '%a%';
+
+select * from employee where id in (1,2,6, 8);
+
+update employee set name = 'qwerty' where id = 1;
+update employee set name = 'qwerty', age = 19 where id = 2;
+
+delete from employee where id = 5;
+truncate employee;
+drop table employee;
+drop database ibrahim_db

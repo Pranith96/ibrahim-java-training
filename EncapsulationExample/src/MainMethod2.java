@@ -1,0 +1,30 @@
+
+public class MainMethod2 {
+
+	public static void main(String[] args) {
+		
+		Address addr = new Address();
+		addr.setStreet("123 Main St");
+		addr.setCity("Springfield");
+		addr.setState("IL");
+		addr.setZipCode("62701");
+		System.out.println(addr);
+		
+		Student s1 = new Student();
+		s1.setId(1);
+		s1.setName("ABC");
+		s1.setAge(20);
+		s1.setMobileNumber("1234567890");
+		s1.setAddress(addr);
+
+		OldStudent s2 = new OldStudent();
+		s2.setsId(s1.getId());
+		s2.setsAge(s1.getAge());
+		s2.setsMobileNumber(s1.getMobileNumber());
+		s2.setsName(s1.getName());
+		s2.setAddress(s1.getAddress());
+		s2.setAccountNumber(123);
+		s2.setIfsc("XYZ0001");
+		System.out.println(s2);
+	}
+}

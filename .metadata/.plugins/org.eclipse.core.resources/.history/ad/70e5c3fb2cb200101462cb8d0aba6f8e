@@ -1,0 +1,46 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.setId(1);
+		s1.setName("ABC");
+		s1.setAge(20);
+
+		Student s2 = new Student(2, "DEF", 25);
+		Student s3 = new Student(3, "GHI", 30);
+
+		Map<Integer, Student> map = new HashMap<>();
+		map.put(1, s1);
+		map.put(2, s2);
+		map.put(3, s3);
+		System.out.println(map);
+		
+		Student s = map.get(2);
+		System.out.println(s);
+		int size = map.size();
+		System.out.println(size);
+		System.out.println(map.containsKey(2));
+		System.out.println(map.containsValue(s3));
+		System.out.println(map.isEmpty());
+		System.out.println(!map.isEmpty());
+		map.remove(3);
+		System.out.println(map);
+
+		System.out.println(map.keySet());
+		System.out.println(map.values());
+		map.putIfAbsent(4, s1);
+		System.out.println(map);
+		map.putIfAbsent(4, s2);
+		System.out.println(map);
+		map.put(4, s2);
+		System.out.println(map);
+				
+		for(Map.Entry<Integer, Student> m : map.entrySet()) {
+			System.out.println(m.getKey() + " : " + m.getValue());
+			map.remove(2);
+		}
+	}
+}
